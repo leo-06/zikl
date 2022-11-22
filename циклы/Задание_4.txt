@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine("Chelk " + (i + 1));
+                int n = int.Parse(Console.ReadLine());
+                TimeSpan WATCH = default(TimeSpan); //TimeSpan - объект представляет интервал времени
+                int j = 0;
+                while (j < n)
+                {
+                    j++;
+                    WATCH = new TimeSpan(j, j * 5 + (int)(60 / 360.0 * 30.0), 0);
+                }
+                Console.WriteLine("Определение времени с точностью до минуты " + (i + 1) + "\n" + WATCH);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}

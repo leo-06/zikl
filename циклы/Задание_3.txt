@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите высоту ёлочки: ");
+            int razmernost = int.Parse(Console.ReadLine());
+            int propusk = razmernost;
+            for (int i = 0, m = 1; i < razmernost; i++, m += 2)
+            {
+                Console.Write(new string(' ', propusk--));
+                Console.WriteLine(new string('*', m));
+            }
+         
+            Console.ReadKey();
+        }
+    }
+}
